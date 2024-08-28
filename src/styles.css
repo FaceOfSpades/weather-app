@@ -7,7 +7,7 @@ body {
 
 .container {
     background-color: white;
-    height: 1000px;
+    height: 600px;
     width: 2000px;
     border-radius: 15px;
     display: flex;
@@ -15,22 +15,61 @@ body {
     align-items: center;
 }
 
+img {
+    height: 600px;
+    width: 2000px;
+    opacity: 40%;
+    border-radius: 10px;
+    display: none;
+}
+
 .display-container {
-    display: flex;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     font-size: 30px;
     font-weight: 800;
     padding: 10px;
-    margin-top: 250px;
-    gap: 100px;
+    margin-top: 5%;
+    justify-items: center;
+    column-gap: 50px;
+    row-gap: 50px;
 }
 
-.display-container div {
-    background-color:rgb(141, 149, 155);
-    border-radius: 15px;
+.tiles {
+    background-color:rgb(229, 234, 236);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.high {
+    font-size: 100px;
+    color: red;
+    text-shadow: 2px 2px 4px black;
+}
+
+.low {
+    font-size: 50px;
+    color: blue;
+    text-shadow: 2px 2px 4px black;
+}
+
+.description {
+    grid-column-start: span 7;
+    background-color:rgb(229, 234, 236);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px 40px;
 }
 
 #form-container {
-    margin-top: auto;
+    position: absolute;
+    top: 500px;
     font-size: 30px;
     padding: 40px;
     display: flex;
